@@ -29,7 +29,7 @@ const logError = (id) => {
 
 /*
  * Работает так
- */
+ 
 makeTransaction({ id: 70, amount: 150 }, logSuccess, logError);
 makeTransaction({ id: 71, amount: 230 }, logSuccess, logError);
 makeTransaction({ id: 72, amount: 75 }, logSuccess, logError);
