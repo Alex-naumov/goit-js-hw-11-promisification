@@ -4,16 +4,15 @@ const randomIntegerFromInterval = (min, max) => {
 
 const makeTransaction = (transaction) => {
   const delay = randomIntegerFromInterval(200, 500);
-  const id = transaction.id;
 
   const promise = new Promise((logSuccess, logError) => {
     setTimeout(() => {
       const canProcess = Math.random() > 0.3;
 
       if (canProcess) {
-        logSuccess({ id, delay });
+        logSuccess({ id: transaction.id, time: delay });
       } else {
-        logError(id);
+        logError(transaction.id);
       }
     }, delay);
   });
